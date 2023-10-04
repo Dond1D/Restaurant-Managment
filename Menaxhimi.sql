@@ -428,7 +428,7 @@ delete from Porosia where Nr_Porosia = 20;
 delete from Porosia where Nr_Porosia = 21;
 delete from Kamarieri where NR_PersonalK = 19335444;
 
---1 Donjet Dana--
+
 select *
 from Puntoret
 where Vendlindja ='Prishtine';
@@ -445,7 +445,7 @@ select Mbiemri
 from Puntoret
 group by Mbiemri;
 
---2 Donjet Dana--
+
 select Restaurant_IdK
 from Restaurant_Klienti
 where Id_Klienti_R = 002 
@@ -463,7 +463,7 @@ select Emri_Porosise
 from Porosia p
 where p.Detajet = 'Tavolina nr 2';
 
---3 Donjet Dana--
+
 
 SELECT Vendlindja, COUNT(*) AS puntori_count
 FROM Puntoret 
@@ -497,7 +497,7 @@ HAVING COUNT(K_Id) = (SELECT MAX(cnt)
                             FROM Faktura 
                             GROUP BY Emri_Restaurantit) as t)
 
---simple subqueries Donjet Dana--
+
 SELECT Klienti.Emri, Klienti.Mbiemri, SUM(Faktura.Cmimi) as Total_Porosia
 FROM Klienti
 INNER JOIN Faktura
@@ -524,7 +524,7 @@ FROM Personi
 GROUP BY Profesioni
 HAVING COUNT(*) > 1;
 
---Advanced Subqueries  Donjet Dana--
+
 SELECT r.Emri
 FROM Restauranti r
 WHERE r.ID_PronariR = (SELECT Id_P FROM Pronari WHERE Emri = 'Dardan' );
@@ -545,8 +545,6 @@ FROM SherbimeOnline
 JOIN Restauranti ON SherbimeOnline.Restauranti_ID = Restauranti.Id_Restaurant;
 
 
-
---Union/Prerja/Diferenca Donjet Dana
 
 SELECT k.NR_PersonalK
 FROM Kamarieri k
@@ -628,7 +626,6 @@ WHERE NR_PersonalK IN (
 
 
 
---Storage Procedures Donjet Dana- -
 
 
 
@@ -685,7 +682,7 @@ END
 
 
 
-----Rigon Gashi
+
 
 select Emri
  from Puntoret
